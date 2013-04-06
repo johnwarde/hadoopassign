@@ -4,6 +4,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.FileInputFormat;
 import org.apache.hadoop.mapred.FileOutputFormat;
@@ -44,11 +45,12 @@ public class GenerateCoAppearanceNetwork extends Configured implements Tool {
 		JobConf job = new JobConf(conf, GenerateCoAppearanceNetwork.class);
 		job.setJobName("GenerateCoAppearanceNetwork");
  
-		job.setMapperClass(WordMapper.class);
-		job.setReducerClass(SumReducer.class);
+		job.setMapperClass(MultipleLocisMapper.class);
+		//job.setMapperClass(MatchLocisMapper.class);
+		//job.setReducerClass(SumLocisReducer.class);
 		
-		job.setMapOutputKeyClass(Text.class);
-		job.setMapOutputValueClass(IntWritable.class);
+		job.setMapOutputKeyClass(LongWritable.class);
+		job.setMapOutputValueClass(Text.class);
 
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
