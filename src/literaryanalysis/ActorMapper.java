@@ -45,6 +45,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 		String s = value.toString();
 		String ActorName;
 		String Pairing;
+		int compareResult;
 		long lEstimatedLineNo = key.get() / lAverageLineSize;
 
 		//System.out.println(this.getClass().toString() + " called with string length : " + s.length());
@@ -58,14 +59,16 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 			if (null == lastActor) {
 				lastActor = ActorName;
 			} else {
-				if (useSorting) {
-					if (lastActor.compareTo(ActorName) < 0) {
-						Pairing = String.format("%s|%s", lastActor, ActorName);
-					} else {
-						Pairing = String.format("%s|%s", ActorName, lastActor);
-					}
+				compareResult = lastActor.compareTo(ActorName);
+				if (0 == compareResult) {
+					// Same actor name, we don't want to record this
+					continue;
 				} else {
-					Pairing = String.format("%s|%s", lastActor, ActorName);
+					if (useSorting && compareResult > 0) {
+						Pairing = String.format("%s|%s", ActorName, lastActor);
+					} else {
+						Pairing = String.format("%s|%s", lastActor, ActorName);
+					}
 				}
 				System.out.println(String.format("pairing: %s", Pairing));
 	    		output.collect(new Text(Pairing), new LongWritable(1));
