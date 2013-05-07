@@ -54,6 +54,8 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 		Pattern r = Pattern.compile(pattern, Pattern.MULTILINE);
 		Matcher m = r.matcher(s);
 
+		// TODO: remove this line, only testing eGit
+
 		while (m.find()) {
 			ActorName = m.group(1);
 			if (null == lastActor) {
