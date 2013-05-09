@@ -1,3 +1,10 @@
+/**
+ * Student ID:   D10126532
+ * Student Name: John Warde
+ * Course Code:  DT230B
+ * 
+ */
+
 package literaryanalysis;
 import java.io.IOException;
 
@@ -13,22 +20,17 @@ import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-/**
- * Student ID:   D10126532
- * Student Name: John Warde
- * Course Code:  DT230B
- * 
- */
+
 
 
 public class GenerateCoAppearanceNetwork extends Configured implements Tool {
 	public static void main(String[] args) throws IOException {
-		
 		int result = 0;
 		try {
+			// Set-up the Job Run (and configuration) using this class and the arguments from the command line
 			result = ToolRunner.run(new Configuration(), new GenerateCoAppearanceNetwork(), args);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			System.out.println("ERROR: executing ToolRunner.run()");
 			e.printStackTrace();
 		}
 		System.exit(result);
@@ -36,37 +38,44 @@ public class GenerateCoAppearanceNetwork extends Configured implements Tool {
 	
 
 	@Override
-	public int run(String[] args) throws Exception {		
+	public int run(String[] args) throws Exception {
+		// Get current configuration
 		Configuration conf = getConf();
-
-//		File inFile = new File(args[0]);
-//		conf.setLong("file.size", inFile.length());
-//		inFile = null;
 		
+		// Create a new Hadoop Job using this class
 		JobConf job = new JobConf(conf, GenerateCoAppearanceNetwork.class);
+		// Set the job name, appears in the Job Tracker web interface
 		job.setJobName("GenerateCoAppearanceNetwork");
 		
-		//job.setMapperClass(MultipleLocisMapper.class);
-		//job.setMapperClass(MatchLocisMapper.class);
-		//job.setReducerClass(SumLocisReducer.class);
+		// Set the Mapper and Reducer for this job
 		job.setMapperClass(ActorMapper.class);
 		job.setReducerClass(PairingReducer.class);
 		
-		//job.setMapOutputKeyClass(LongWritable.class);
-		//job.setMapOutputValueClass(Text.class);
+		// Give the option of using the combiner for 
+		// benchmarking the different command line options
+		boolean bUseCombiner = job.getBoolean("use-combiner", true);
+		if (bUseCombiner) {
+			// Use the same code as the reducer for the combiner, 
+			// the combiner will execute on the same node as the 
+			// mapper and should reduce network traffic between the 
+			// mapper and reducer plus the work the reducer has to do.
+			job.setCombinerClass(PairingReducer.class);
+		}
+		
+		// Set the Key and Value types for the Mapper
 		job.setMapOutputKeyClass(Text.class);
 		job.setMapOutputValueClass(LongWritable.class);
 
+		// Set the Key and Value types for the output of the
+		// Reducer and the job
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(LongWritable.class);
 		
-		//job.setInputFormat(NLineInputFormat.class);
-
-
+		// Set the input and output filename for the job
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
-		//FileOutputFormat.setOutputPath(job, new Path("MultipleLocisResults"));
 
+		// Run the Hadoop Job!
 		JobClient.runJob(job);
 		
 /*		

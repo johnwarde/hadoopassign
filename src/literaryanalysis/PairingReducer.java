@@ -1,6 +1,10 @@
 /**
+ * Student ID:   D10126532
+ * Student Name: John Warde
+ * Course Code:  DT230B
  * 
  */
+
 package literaryanalysis;
 
 import java.io.IOException;
@@ -21,13 +25,17 @@ public class PairingReducer extends MapReduceBase implements
 				OutputCollector<Text, LongWritable> output, Reporter reporter)
 			throws IOException {
 		
+			// Used to record the number of times actors appear together
 			int weight = 0;
 
+			// Cycle though all the value associated with this key
 			while (values.hasNext()) {
 				LongWritable value = values.next();
 				weight += value.get();
 			}
+			// Prepare the data for output to Gephi by removing relationship separator first
 			Text outputKey = new Text(key.toString().replace('|', ' '));
+			// Then outputting the weight to indicate the strength of the co-appearance relationship.
 			output.collect(outputKey, new LongWritable(weight));
 			System.out.println(String.format("emit: %s %d", outputKey.toString(), weight));
 		}

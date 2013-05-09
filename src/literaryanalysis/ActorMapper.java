@@ -1,3 +1,10 @@
+/**
+ * Student ID:   D10126532
+ * Student Name: John Warde
+ * Course Code:  DT230B
+ * 
+ */
+
 package literaryanalysis;
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -12,16 +19,10 @@ import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reporter;
 
 
-/**
- * Student ID:   D10126532
- * Student Name: John Warde
- * Course Code:  DT230B
- * 
- */
-
 public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, LongWritable> {
 
 	static long lChunkStartLineNo = -1;
+	static long lMapperLineNumber = 0;
 	static String lastActor = null;
 	
 	long lFileSize = 0;
@@ -29,7 +30,6 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 	boolean useSorting = true;
 
 	public void configure(JobConf job) {
-		//lFileSize = job.getLong("file.size", 0);
 		lAverageLineSize = job.getLong("average-line-length-bytes", 0);
 		System.out.println("QWERTY: Average bytes per line is  " + lAverageLineSize);	
 	}
@@ -38,6 +38,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 	public void map(LongWritable key, Text value, 
 			OutputCollector<Text, LongWritable> output, Reporter reporter)
 		throws IOException {
+		System.out.println(String.format("Processing key = [%d], mapper line number = [%d] ", key, lMapperLineNumber));	
 		if (0 == value.getLength()) {
 			// if there is nothing to process get out, for efficiency
 			return;
@@ -47,14 +48,10 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 		String Pairing;
 		int compareResult;
 		long lEstimatedLineNo = key.get() / lAverageLineSize;
-
-		//System.out.println(this.getClass().toString() + " called with string length : " + s.length());
 		
 		String pattern = "^([A-Z]+?)\t";	
 		Pattern r = Pattern.compile(pattern, Pattern.MULTILINE);
 		Matcher m = r.matcher(s);
-
-		// TODO: remove this line, only testing eGit
 
 		while (m.find()) {
 			ActorName = m.group(1);
@@ -63,7 +60,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 			} else {
 				compareResult = lastActor.compareTo(ActorName);
 				if (0 == compareResult) {
-					// Same actor name, we don't want to record this
+					// Same actor name, we don't want to record this as a pairing
 					continue;
 				} else {
 					if (useSorting && compareResult > 0) {
@@ -72,7 +69,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 						Pairing = String.format("%s|%s", lastActor, ActorName);
 					}
 				}
-				System.out.println(String.format("pairing: %s", Pairing));
+				System.out.println(String.format("Pairing: %s", Pairing));
 	    		output.collect(new Text(Pairing), new LongWritable(1));
 			}
     		System.out.println(String.format("mapper: found %s at estimated line no. %d", ActorName, lEstimatedLineNo));
