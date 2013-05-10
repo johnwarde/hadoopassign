@@ -33,10 +33,11 @@ public class PairingReducer extends MapReduceBase implements
 				LongWritable value = values.next();
 				weight += value.get();
 			}
-			// Prepare the data for output to Gephi by removing relationship separator first
-			Text outputKey = new Text(key.toString().replace('|', ' '));
+			// Prepare the data in the format that Gephi expects.
+			Text outputKey = new Text(key.toString().replace('|', '\t').concat("\tundirected"));
 			// Then outputting the weight to indicate the strength of the co-appearance relationship.
 			output.collect(outputKey, new LongWritable(weight));
+			// Record in logging
 			System.out.println(String.format("emit: %s %d", outputKey.toString(), weight));
 		}
 }

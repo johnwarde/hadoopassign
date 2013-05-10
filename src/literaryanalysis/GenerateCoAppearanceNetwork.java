@@ -52,8 +52,10 @@ public class GenerateCoAppearanceNetwork extends Configured implements Tool {
 		job.setReducerClass(PairingReducer.class);
 		
 		// Give the option of using the combiner for 
-		// benchmarking the different command line options
+		// benchmarking the different command line options;
+		// defaulting to true for best performance in production jobs
 		boolean bUseCombiner = job.getBoolean("use-combiner", true);
+		System.out.println("Using Combiner? " + (bUseCombiner ? "Yes" : "No"));
 		if (bUseCombiner) {
 			// Use the same code as the reducer for the combiner, 
 			// the combiner will execute on the same node as the 
@@ -77,27 +79,7 @@ public class GenerateCoAppearanceNetwork extends Configured implements Tool {
 
 		// Run the Hadoop Job!
 		JobClient.runJob(job);
-		
-/*		
-		JobConf job2 = new JobConf(conf, GenerateCoAppearanceNetwork.class);
-		job2.setJobName("MatchLocisMapper");
- 
-		//job2.setMapperClass(MatchLocisMapper.class);
-		//job2.setReducerClass(SumLocisReducer.class);
-		
-		job2.setMapOutputKeyClass(LongWritable.class);
-		job2.setMapOutputValueClass(Text.class);
-
-		job2.setOutputKeyClass(Text.class);
-		job2.setOutputValueClass(IntWritable.class);
-
-		
-		FileInputFormat.addInputPath(job2, new Path(args[0]));
-		FileOutputFormat.setOutputPath(job2, new Path(args[1]));
-		
-		JobClient.runJob(job2);
-*/		
-		
+				
 		return 0;
 	}
 

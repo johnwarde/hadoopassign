@@ -22,8 +22,10 @@ import org.apache.hadoop.mapred.Reporter;
 public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, LongWritable> {
 
 	static long lChunkStartLineNo = -1;
+	// Records the Nth line number processed by this instance of the Mapper
 	static long lMapperLineNumber = 0;
 	static String lastActor = null;
+	static long lastActorLineNumber = -1;
 	
 	long lFileSize = 0;
 	long lAverageLineSize = 0;
@@ -38,7 +40,9 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 	public void map(LongWritable key, Text value, 
 			OutputCollector<Text, LongWritable> output, Reporter reporter)
 		throws IOException {
-		System.out.println(String.format("Processing key = [%d], mapper line number = [%d] ", key, lMapperLineNumber));	
+		long lKey = key.get();
+		System.out.println(String.format("Processing key = [%d], mapper line number = [%d] ", lKey, lMapperLineNumber));
+		lMapperLineNumber++;
 		if (0 == value.getLength()) {
 			// if there is nothing to process get out, for efficiency
 			return;
@@ -47,20 +51,23 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 		String ActorName;
 		String Pairing;
 		int compareResult;
-		long lEstimatedLineNo = key.get() / lAverageLineSize;
+		long lEstimatedLineNo = lKey / lAverageLineSize;
 		
-		String pattern = "^([A-Z]+?)\t";	
-		Pattern r = Pattern.compile(pattern, Pattern.MULTILINE);
+		String pattern = "^([A-Z]+?)\t";
+//		Pattern r = Pattern.compile(pattern, Pattern.MULTILINE);
+		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(s);
 
 		while (m.find()) {
 			ActorName = m.group(1);
 			if (null == lastActor) {
 				lastActor = ActorName;
+				lastActorLineNumber = lMapperLineNumber;
 			} else {
 				compareResult = lastActor.compareTo(ActorName);
 				if (0 == compareResult) {
-					// Same actor name, we don't want to record this as a pairing
+					// If this happens the we may have a parsing issue. 
+					System.out.println(String.format("WARNING: found same actor name (%s) adjacent, mapper line numbers %d & %d.", ActorName, lastActorLineNumber, lMapperLineNumber));
 					continue;
 				} else {
 					if (useSorting && compareResult > 0) {
@@ -69,6 +76,8 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
 						Pairing = String.format("%s|%s", lastActor, ActorName);
 					}
 				}
+				lastActor = ActorName;
+				lastActorLineNumber = lMapperLineNumber;
 				System.out.println(String.format("Pairing: %s", Pairing));
 	    		output.collect(new Text(Pairing), new LongWritable(1));
 			}
