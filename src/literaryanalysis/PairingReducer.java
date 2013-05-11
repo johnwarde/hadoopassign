@@ -34,11 +34,13 @@ public class PairingReducer extends MapReduceBase implements
 				weight += value.get();
 			}
 			// Prepare the data in the format that Gephi expects.
-			Text outputKey = new Text(key.toString().replace('|', '\t').concat("\tundirected"));
-			// Then outputting the weight to indicate the strength of the co-appearance relationship.
+			String strOutputKey = (key.toString().replace('|', '\t'));
+			strOutputKey = strOutputKey.concat('\t' + "undirected");
+			Text outputKey = new Text(strOutputKey);
+			// Then emit the weight to indicate the strength of the co-appearance relationship.
 			output.collect(outputKey, new LongWritable(weight));
 			// Record in logging
-			System.out.println(String.format("emit: %s %d", outputKey.toString(), weight));
+			System.out.println(String.format("emit: %s %d", strOutputKey, weight));
 		}
 }
 

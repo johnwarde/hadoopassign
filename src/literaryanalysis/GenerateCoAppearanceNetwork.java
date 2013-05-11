@@ -17,10 +17,9 @@ import org.apache.hadoop.mapred.FileInputFormat;
 import org.apache.hadoop.mapred.FileOutputFormat;
 import org.apache.hadoop.mapred.JobClient;
 import org.apache.hadoop.mapred.JobConf;
+import org.apache.hadoop.mapred.RunningJob;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
-
-
 
 
 public class GenerateCoAppearanceNetwork extends Configured implements Tool {
@@ -78,8 +77,12 @@ public class GenerateCoAppearanceNetwork extends Configured implements Tool {
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
 		// Run the Hadoop Job!
-		JobClient.runJob(job);
-				
+		RunningJob runningJob = JobClient.runJob(job);
+		
+		if (job.getBoolean(ResourceNames.MATCH_MINOR_ACTORS_PARAM, false)) {
+			long numBads = runningJob.getCounters().getGroup("Mapper").getCounter(ResourceNames.SAME_ACTOR_NAME_ADJACENT_COUNTER);
+			System.out.println(String.format("NOTE: Check logs, %s = %d", ResourceNames.SAME_ACTOR_NAME_ADJACENT_COUNTER, numBads));
+		}		
 		return 0;
 	}
 
