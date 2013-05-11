@@ -15,6 +15,6 @@ public final class ResourceNames {
     // Hadoop counter names
     public static final String SAME_ACTOR_NAME_ADJACENT_COUNTER = "Same actor name adjacent count";
     
-    // Don't get this class be instantiated
+    // Don't let this class be instantiated
     protected ResourceNames() {}
 }

@@ -39,7 +39,13 @@ public class PairingReducer extends MapReduceBase implements
             Text outputKey = new Text(strOutputKey);
             // Then emit the weight to indicate the strength of the co-appearance relationship.
             output.collect(outputKey, new LongWritable(weight));
-            // Record in logging
+            // Unfortunately, when the output CSV file is viewed in HDFS (or outside)
+            // "undirected" appears twice in the file for each line, but this does
+            // not happen when you view the Hadoop logs after job completion (see next line of code)
+            // Workaround automation was created to post process this data
+            // for use in Gephi, see post-process.sh
+            
+            // Record in log
             System.out.println(String.format("emit: %s %d", strOutputKey, weight));
         }
 }
