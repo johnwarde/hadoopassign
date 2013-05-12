@@ -22,10 +22,10 @@ import org.apache.hadoop.mapred.Reporter;
 public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, LongWritable> {
 
     
-    private long	lMapperLineNumber   = 0;    // Records the Nth line number processed by this instance of the Mapper
-    private Pattern	ActorRegEx          = null; // Regular expression pattern for matching actor names
-    private String	lastActor           = null; // Last matched actor name
-    private long	lastActorLineNumber = -1;   // Where within the physical HDFS block it was matched
+    private long    lMapperLineNumber   = 0;    // Records the Nth line number processed by this instance of the Mapper
+    private Pattern    ActorRegEx          = null; // Regular expression pattern for matching actor names
+    private String    lastActor           = null; // Last matched actor name
+    private long    lastActorLineNumber = -1;   // Where within the physical HDFS block it was matched
     
     // Corresponding command line values
     private long    lMaxLineDiff      = -1;
@@ -37,7 +37,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
         // Retrieve the command line values
         lMaxLineDiff        = job.getLong(ResourceNames.MATCH_WITHIN_N_LINES_PARAM, -1);
         bUseSorting         = job.getBoolean(ResourceNames.SORT_PAIRS_PARAM, true);
-        bMatchMinorActors	= job.getBoolean(ResourceNames.MATCH_MINOR_ACTORS_PARAM, false);
+        bMatchMinorActors   = job.getBoolean(ResourceNames.MATCH_MINOR_ACTORS_PARAM, false);
         // Compile the Regular Expression only one during the Mapper instance to save processing time,
         // actor names are all UPPER CASE, minor actors include lower case characters name i.e. "Nurse"
         ActorRegEx = bMatchMinorActors ? Pattern.compile("^([A-Za-z ]+?)\t") : Pattern.compile("^([A-Z ]+?)\t");
@@ -68,7 +68,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
             }
             if (null == lastActor) {
                 // Recording first instance of an actor name
-                lastActor			= ActorName;
+                lastActor           = ActorName;
                 lastActorLineNumber = lMapperLineNumber;
                 // No more processing to do for this map() call.
                 return;
@@ -86,7 +86,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
                     reporter.incrCounter("Mapper", ResourceNames.SAME_ACTOR_NAME_ADJACENT_COUNTER, 1);
                 }
                 // Remember this latest appearence of this actor.
-                lastActor			= ActorName;
+                lastActor           = ActorName;
                 lastActorLineNumber = lMapperLineNumber;
                 return;
             }
@@ -100,7 +100,7 @@ public class ActorMapper extends MapReduceBase implements Mapper<LongWritable, T
                 }
                 System.out.println(String.format("Pairing: (%s), lines (%d, %d)", Pairing, lastActorLineNumber, lMapperLineNumber));
                 output.collect(new Text(Pairing), new LongWritable(1));
-                lastActor			= ActorName;
+                lastActor           = ActorName;
                 lastActorLineNumber = lMapperLineNumber;
             }
         }        
