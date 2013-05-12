@@ -16,6 +16,10 @@ do
   FILENAME=`basename $f .txt`  
   echo "Processing $FILENAME play ..."
   hadoop fs -put $SRCDIR/$FILENAME.txt $HDFSIN
-  hadoop jar $JARDIR/GenerateCoAppearanceNetwork.jar literaryanalysis.GenerateCoAppearanceNetwork -D match-within-n-lines=5 $HDFSIN/$FILENAME.txt $HDFSOUT/$FILENAME.csv &
+  hadoop jar $JARDIR/GenerateCoAppearanceNetwork.jar \
+         literaryanalysis.GenerateCoAppearanceNetwork \
+         -D match-within-n-lines=5 \
+         $HDFSIN/$FILENAME.txt \
+         $HDFSOUT/$FILENAME.csv &
 done
 
