@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg contentScriptType="text/ecmascript" width="595px"
+     xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
+     contentStyleType="text/css" viewBox="-584 -586 1176 1183" height="598px"
+     preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
+     version="1.1">
+    <g id="edges">
+        <path fill="none" stroke-width="0.25"
+              d="M 497.853455,241.657455 C 455.603027,180.127808 484.521881,24.457703 546.051575,-17.792707"
+              class="ABRAHAM GREGORY" stroke-opacity="1.0" stroke="#8b49cc"/>
+        <path fill="none" stroke-width="2.25"
+              d="M 497.853455,241.657455 C 500.842773,317.140564 392.102051,434.849182 316.618958,437.838501"
+              class="ABRAHAM SAMPSON" stroke-opacity="1.0" stroke="#8b49cc"/>
+        <path fill="none" stroke-width="7.25"
+              d="M 546.051575,-17.792707 C 591.291260,119.220062 453.631744,392.598785 316.618958,437.838501"
+              class="GREGORY SAMPSON" stroke-opacity="1.0" stroke="#8b49cc"/>
+        <path fill="none" stroke-width="3.0"
+              d="M 253.166214,153.857803 C 137.928284,100.627403 44.917023,-152.075043 98.147415,-267.312958"
+              class="BALTHASAR FRIAR LAURENCE" stroke-opacity="1.0"
+              stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.5"
+              d="M 253.166214,153.857803 C 72.172668,58.572086 -56.389084,-355.846832 38.896629,-536.840393"
+              class="BALTHASAR PRINCE" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="2.5"
+              d="M 253.166214,153.857803 C 234.937958,307.722229 -23.201019,511.176483 -177.065445,492.948242"
+              class="BALTHASAR ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 98.147415,-267.312958 C 32.391769,-309.368286 -3.158699,-471.084747 38.896629,-536.840393"
+              class="FRIAR LAURENCE PRINCE" stroke-opacity="1.0"
+              stroke="#6acc8a"/>
+        <path fill="none" stroke-width="11.75"
+              d="M 98.147415,-267.312958 C 195.157104,-60.218121 30.029388,395.938568 -177.065445,492.948242"
+              class="FRIAR LAURENCE ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 98.147415,-267.312958 C 131.823593,-112.649345 -49.657555,169.860367 -204.321182,203.536545"
+              class="FRIAR LAURENCE MERCUTIO" stroke-opacity="1.0"
+              stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 98.147415,-267.312958 C 198.463104,-143.908737 163.830322,191.671158 40.426090,291.986847"
+              class="FRIAR LAURENCE PETER" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="5.0"
+              d="M 98.147415,-267.312958 C 67.442696,-143.484406 -164.357178,-3.798706 -288.185730,-34.503422"
+              class="FRIAR LAURENCE JULIET" stroke-opacity="1.0"
+              stroke="#49cccc"/>
+        <path fill="none" stroke-width="2.0"
+              d="M 98.147415,-267.312958 C -20.002079,-178.818115 -329.968597,-223.300049 -418.463440,-341.449554"
+              class="FRIAR LAURENCE PARIS" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="1.75"
+              d="M -177.065445,492.948242 C -245.619431,515.531799 -382.325745,446.576172 -404.909332,378.022186"
+              class="ROMEO TYBALT" stroke-opacity="1.0" stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 4.049263,3.931061 C 153.344696,28.198612 340.886505,288.543060 316.618958,437.838501"
+              class="BENVOLIO SAMPSON" stroke-opacity="1.0" stroke="#ab498a"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 4.049263,3.931061 C -31.379913,-69.137375 25.078983,-231.883774 98.147415,-267.312958"
+              class="BENVOLIO FRIAR LAURENCE" stroke-opacity="1.0"
+              stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.75"
+              d="M 4.049263,3.931061 C -97.135559,-111.192711 -76.227142,-435.655579 38.896629,-536.840393"
+              class="BENVOLIO PRINCE" stroke-opacity="1.0" stroke="#ab8a49"/>
+        <path fill="none" stroke-width="14.25"
+              d="M 4.049263,3.931061 C 65.629761,137.957443 -43.039063,431.367737 -177.065445,492.948242"
+              class="BENVOLIO ROMEO" stroke-opacity="1.0" stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.75"
+              d="M 4.049263,3.931061 C -77.083435,-14.569113 -171.032227,-164.018417 -152.532043,-245.151123"
+              class="BENVOLIO CAPULET" stroke-opacity="1.0" stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.5"
+              d="M 4.049263,3.931061 C -127.984993,88.503616 -452.895203,17.311066 -537.467773,-114.723190"
+              class="BENVOLIO LADY CAPULET" stroke-opacity="1.0"
+              stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.5"
+              d="M 4.049263,3.931061 C -32.306984,-146.644089 139.021378,-427.041199 289.596527,-463.397461"
+              class="BENVOLIO LADY MONTAGUE" stroke-opacity="1.0"
+              stroke="#ab8a49"/>
+        <path fill="none" stroke-width="11.0"
+              d="M 4.049263,3.931061 C 2.296268,85.526245 -122.725998,205.289536 -204.321182,203.536545"
+              class="BENVOLIO MERCUTIO" stroke-opacity="1.0" stroke="#cc4949"/>
+        <path fill="none" stroke-width="2.25"
+              d="M 4.049263,3.931061 C 40.707470,-146.312332 321.059845,-316.690094 471.303253,-280.031891"
+              class="BENVOLIO MONTAGUE" stroke-opacity="1.0" stroke="#ab8a49"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 4.049263,3.931061 C 68.935791,54.266853 90.761887,227.100327 40.426090,291.986847"
+              class="BENVOLIO PETER" stroke-opacity="1.0" stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.75"
+              d="M 4.049263,3.931061 C -2.924225,160.541016 -248.299377,384.995667 -404.909332,378.022186"
+              class="BENVOLIO TYBALT" stroke-opacity="1.0" stroke="#cc4949"/>
+        <path fill="none" stroke-width="1.25"
+              d="M -152.532043,-245.151123 C -106.828514,-299.719391 43.579159,-313.016479 98.147415,-267.312958"
+              class="CAPULET FRIAR LAURENCE" stroke-opacity="1.0"
+              stroke="#49cccc"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -152.532043,-245.151123 C -172.584167,-341.774719 -57.726959,-516.788269 38.896629,-536.840393"
+              class="CAPULET PRINCE" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="0.75"
+              d="M -152.532043,-245.151123 C -9.818848,-92.624573 -24.538895,350.235046 -177.065445,492.948242"
+              class="CAPULET ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="5.25"
+              d="M -152.532043,-245.151123 C -203.433609,-142.078400 -434.395050,-63.821632 -537.467773,-114.723190"
+              class="CAPULET LADY CAPULET" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.75"
+              d="M -152.532043,-245.151123 C -34.741131,-376.894348 339.560028,-397.822784 471.303253,-280.031891"
+              class="CAPULET MONTAGUE" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="2.75"
+              d="M -152.532043,-245.151123 C -78.372833,-70.040985 -229.799194,303.862976 -404.909332,378.022186"
+              class="CAPULET TYBALT" stroke-opacity="1.0" stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="3.25"
+              d="M -152.532043,-245.151123 C -137.533234,-175.890839 -218.925446,-49.502228 -288.185730,-34.503422"
+              class="CAPULET JULIET" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.5"
+              d="M -152.532043,-245.151123 C -147.675323,-93.502289 -367.863495,141.256012 -519.512329,146.112717"
+              class="CAPULET LADY  CAPULET" stroke-opacity="1.0"
+              stroke="#49cccc"/>
+        <path fill="none" stroke-width="2.75"
+              d="M -152.532043,-245.151123 C -224.978012,-211.224518 -384.536835,-269.003601 -418.463440,-341.449554"
+              class="CAPULET PARIS" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="1.0"
+              d="M -537.467773,-114.723190 C -506.618317,-314.419525 -160.799683,-567.689819 38.896629,-536.840393"
+              class="LADY CAPULET PRINCE" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="0.5"
+              d="M -537.467773,-114.723190 C -343.852997,-65.269371 -127.611626,299.333466 -177.065445,492.948242"
+              class="LADY CAPULET ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.75"
+              d="M -537.467773,-114.723190 C -559.012207,-183.869339 -487.609589,-319.905151 -418.463440,-341.449554"
+              class="LADY CAPULET PARIS" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 289.596527,-463.397461 C 224.767960,-427.946075 74.348022,-472.011810 38.896629,-536.840393"
+              class="LADY MONTAGUE PRINCE" stroke-opacity="1.0" stroke="#8bcc49"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 289.596527,-463.397461 C 362.610992,-463.065674 471.635040,-353.046356 471.303253,-280.031891"
+              class="LADY MONTAGUE MONTAGUE" stroke-opacity="1.0"
+              stroke="#8bcc49"/>
+        <path fill="none" stroke-width="15.5"
+              d="M -204.321182,203.536545 C -140.987701,255.967743 -124.634247,429.614777 -177.065445,492.948242"
+              class="MERCUTIO ROMEO" stroke-opacity="1.0" stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="0.25"
+              d="M -204.321182,203.536545 C -137.681671,172.277161 9.166697,225.347321 40.426090,291.986847"
+              class="MERCUTIO PETER" stroke-opacity="1.0" stroke="#8a8a8a"/>
+        <path fill="none" stroke-width="3.0"
+              d="M -204.321182,203.536545 C -209.541687,278.551300 -329.894562,383.242676 -404.909332,378.022186"
+              class="MERCUTIO TYBALT" stroke-opacity="1.0" stroke="#cc4949"/>
+        <path fill="none" stroke-width="1.75"
+              d="M 471.303253,-280.031891 C 333.460236,-244.912262 74.016258,-398.997375 38.896629,-536.840393"
+              class="MONTAGUE PRINCE" stroke-opacity="1.0" stroke="#8bcc49"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 40.426090,291.986847 C 37.120064,375.677429 -93.374863,496.254272 -177.065445,492.948242"
+              class="PETER ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.25"
+              d="M -288.185730,-34.503422 C -323.236664,-200.387299 -126.987244,-501.789459 38.896629,-536.840393"
+              class="JULIET PRINCE" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="19.25"
+              d="M -288.185730,-34.503422 C -160.471344,48.762848 -93.799179,365.233856 -177.065445,492.948242"
+              class="JULIET ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="10.0"
+              d="M -288.185730,-34.503422 C -354.086090,-0.690968 -503.655304,-48.822826 -537.467773,-114.723190"
+              class="JULIET LADY CAPULET" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.25"
+              d="M -288.185730,-34.503422 C -157.165314,-34.927731 40.001781,160.966415 40.426090,291.986847"
+              class="JULIET PETER" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="3.75"
+              d="M -288.185730,-34.503422 C -375.630493,-69.837112 -453.797119,-254.004791 -418.463440,-341.449554"
+              class="JULIET PARIS" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.25"
+              d="M -288.185730,-34.503422 C -367.329102,-143.460281 -322.608887,-425.610657 -213.652023,-504.754028"
+              class="JULIET PAGE" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="1.5"
+              d="M -418.463440,-341.449554 C -203.304276,-222.849594 -58.465485,277.789063 -177.065445,492.948242"
+              class="PARIS ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="1.75"
+              d="M 283.177917,-96.293312 C 211.967880,-93.491150 100.949585,-196.102921 98.147415,-267.312958"
+              class="FRIAR JOHN FRIAR LAURENCE" stroke-opacity="1.0"
+              stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.25"
+              d="M 283.177917,-96.293312 C 308.977570,113.603676 32.831543,467.148590 -177.065445,492.948242"
+              class="FRIAR JOHN ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+        <path fill="none" stroke-width="0.75"
+              d="M -213.652023,-504.754028 C -169.559570,-561.681030 -18.030371,-580.932800 38.896629,-536.840393"
+              class="PAGE PRINCE" stroke-opacity="1.0" stroke="#8bcc49"/>
+        <path fill="none" stroke-width="0.25"
+              d="M -213.652023,-504.754028 C -6.794250,-312.530884 15.157684,286.090454 -177.065445,492.948242"
+              class="PAGE ROMEO" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="0.75"
+              d="M -213.652023,-504.754028 C -221.953400,-431.130859 -344.840271,-333.148163 -418.463440,-341.449554"
+              class="PAGE PARIS" stroke-opacity="1.0" stroke="#6acc8a"/>
+        <path fill="none" stroke-width="0.5"
+              d="M 76.822075,552.358582 C 14.162503,591.254028 -138.170013,555.607849 -177.065445,492.948242"
+              class="NURSE ROMEO" stroke-opacity="1.0" stroke="#49cccc"/>
+    </g>
+    <g id="nodes">
+        <circle fill-opacity="0.75" fill="#8b49cc" r="2.498628" cx="497.85345"
+                class="ABRAHAM" cy="241.65746" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#8b49cc" r="2.498628" cx="546.0516"
+                class="GREGORY" cy="-17.792707" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#8b49cc" r="3.201281" cx="316.61896"
+                class="SAMPSON" cy="437.8385" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="2.0332074" cx="253.16621"
+                class="BALTHASAR" cy="153.8578" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="5.9755564" cx="98.147415"
+                class="FRIAR LAURENCE" cy="-267.31296" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#8bcc49" r="5.4383655" cx="38.89663"
+                class="PRINCE" cy="-536.8404" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="8.0" cx="-177.06544"
+                class="ROMEO" cy="492.94824" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#cc4949" r="6.8785954" cx="4.0492635"
+                class="BENVOLIO" cy="3.931061" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="6.19014" cx="-152.53204"
+                class="CAPULET" cy="-245.15112" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="3.6193466" cx="-537.4678"
+                class="LADY CAPULET" cy="-114.72319" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#8bcc49" r="2.1134923" cx="289.59653"
+                class="LADY MONTAGUE" cy="-463.39746" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#cc4949" r="3.1606712" cx="-204.32118"
+                class="MERCUTIO" cy="203.53654" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#8bcc49" r="2.679618" cx="471.30325"
+                class="MONTAGUE" cy="-280.0319" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="3.106291" cx="40.42609"
+                class="PETER" cy="291.98685" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#cc4949" r="2.6175332" cx="-404.90933"
+                class="TYBALT" cy="378.0222" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="4.70701" cx="-288.18573"
+                class="JULIET" cy="-34.50342" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="1.0046226" cx="-519.5123"
+                class="LADY  CAPULET" cy="146.11272" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="3.6309435" cx="-418.46344"
+                class="PARIS" cy="-341.44955" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="1.5134263" cx="283.17792"
+                class="FRIAR JOHN" cy="-96.29331" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#8bcc49" r="2.5506504" cx="-213.65202"
+                class="PAGE" cy="-504.75403" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+        <circle fill-opacity="0.75" fill="#49cccc" r="1.0" cx="76.822075"
+                class="NURSE" cy="552.3586" stroke="#000000"
+                stroke-opacity="0.75" stroke-width="1.0"/>
+    </g>
+    <g id="node-labels">
+        <text font-size="24" x="497.85345" y="245.95238" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="ABRAHAM">
+            ABRAHAM
+        </text>
+        <text font-size="24" x="546.0516" y="-13.347395" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="GREGORY">
+            GREGORY
+        </text>
+        <text font-size="31" x="316.61896" y="443.58035" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="SAMPSON">
+            SAMPSON
+        </text>
+        <text font-size="20" x="253.16621" y="157.56061" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="BALTHASAR">
+            BALTHASAR
+        </text>
+        <text font-size="57" x="98.147415" y="-256.75998" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="FRIAR LAURENCE">
+            FRIAR LAURENCE
+        </text>
+        <text font-size="52" x="38.89663" y="-527.21313" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="PRINCE">
+            PRINCE
+        </text>
+        <text font-size="77" x="-177.06544" y="507.2103" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="ROMEO">
+            ROMEO
+        </text>
+        <text font-size="66" x="4.0492635" y="16.15567" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="BENVOLIO">
+            BENVOLIO
+        </text>
+        <text font-size="59" x="-152.53204" y="-234.22786" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="CAPULET">
+            CAPULET
+        </text>
+        <text font-size="35" x="-537.4678" y="-108.24329" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="LADY CAPULET">
+            LADY CAPULET
+        </text>
+        <text font-size="20" x="289.59653" y="-459.69302" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="LADY MONTAGUE">
+            LADY MONTAGUE
+        </text>
+        <text font-size="30" x="-204.32118" y="209.09319" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="MERCUTIO">
+            MERCUTIO
+        </text>
+        <text font-size="26" x="471.30325" y="-275.21613" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="MONTAGUE">
+            MONTAGUE
+        </text>
+        <text font-size="30" x="40.42609" y="297.3555" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="PETER">
+            PETER
+        </text>
+        <text font-size="25" x="-404.90933" y="382.49606" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="TYBALT">
+            TYBALT
+        </text>
+        <text font-size="45" x="-288.18573" y="-26.311283" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="JULIET">
+            JULIET
+        </text>
+        <text font-size="10" x="-519.5123" y="147.96411" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="LADY  CAPULET">
+            LADY CAPULET
+        </text>
+        <text font-size="35" x="-418.46344" y="-334.96967" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="PARIS">
+            PARIS
+        </text>
+        <text font-size="15" x="283.17792" y="-93.51499" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="FRIAR JOHN">
+            FRIAR JOHN
+        </text>
+        <text font-size="24" x="-213.65202" y="-500.31067" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="PAGE">
+            PAGE
+        </text>
+        <text font-size="10" x="76.822075" y="554.20996" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Arial" class="NURSE">
+            NURSE
+        </text>
+    </g>
+</svg>
